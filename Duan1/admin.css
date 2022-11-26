@@ -1,0 +1,266 @@
+*{box-sizing: border-box;
+    font-family: sans-serif;
+    }
+    .banner{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .menu ul{
+   
+        padding:0px 10px;
+    }
+    .menu ul li{
+        display: inline;
+        list-style-type: none;
+        padding: 0px 15px ;
+    }
+    .menu ul li a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        padding: 10px 30px ;
+    }
+    .menu ul li a:hover{
+        color: red;
+        font-size: 1vw;
+    }
+    .menu{
+        background-color: rgb(0, 0, 0);
+        height: 50px;
+        margin-top: 30px;
+        border-radius: 5px 5px;
+        padding-top:1px;
+    }
+    .chu1{
+        margin-top: 30px;
+        padding: 0 60px;
+        color: rgb(0, 71, 202);
+        background-color:aquamarine;
+        height: 80px;
+        padding-top: 0.5px;
+        border-radius: 5px 5px;
+    }
+    .chu2{
+        color: rgb(0, 71, 202);
+        background-color: aquamarine;
+        margin-top: 30px;
+        padding: 0 60px;
+        height: 65px;
+        border-radius: 5px 5px;
+        padding-top: 0.1px;
+    }
+    .fombds{
+        padding: 20px 0px;
+
+    }
+    .row{
+        float: left;
+        width: 100%;
+    }
+    .mb10{
+        margin-top: 10px;
+    }
+    .headeradmin{
+   
+        background-color: aquamarine;
+        border: 1px rgb(33, 213, 186) solid;
+
+        color: blue;
+        border-radius: 5px;
+        padding: 10px 20px;
+}
+
+.headeradmin h1{
+font-size: 1.5vw;
+}
+.frmcontent{
+padding: 20px 0px;
+}
+
+.frmcontent input[type="text"]{
+    width: 100%;
+    border: 1px bisque solid;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.formtaikhoan{line-height: 150%;
+
+}
+.formtaikhoan input[type="checkbox"]{
+
+
+    
+    border-radius: 5px;
+}
+.formtaikhoan input[type="submit"],
+.frmcontent  input[type="submit"],
+.frmcontent  input[type="reset"],
+.frmcontent  input[type="button"]{
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: rgb(233, 231, 231);
+    border: 1px blueviolet solid;
+}
+.formtaikhoan input[type="submit"]:hover,
+.frmcontent input[type="submit"]:hover,
+.frmcontent  input[type="reset"]:hover,
+.frmcontent  input[type="button"]:hover{
+    background-color:aquamarine;
+}
+.formtaikhoan li a{
+    text-decoration: none;
+    color: black;
+}
+.formtaikhoan li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.headeradmin{
+   
+    background-color: aquamarine;
+    border: 1px rgb(33, 213, 186) solid;
+
+    color: blue;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+.headeradmin h1{
+font-size: 1.5vw;
+}
+.frmdsloai table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px black solid;
+}
+.frmdsloai table th{
+  
+    padding: 20px ;
+    background-color: #3333;
+}
+.frmdsloai table td{
+    padding: 20px 30px;
+    border: 1px black solid;
+
+    
+}
+.formdslh table{
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+.formdslh table th:nth-child(1){
+    width: 10%;
+    padding:20px ;
+    background-color: #ccc;
+}
+.formdslh table th:nth-child(2){
+    width: 30%;
+    padding:20px ;
+    background-color: #ccc;
+}
+.formdslh table th:nth-child(3){
+    width: 40%;
+    padding:20px ;
+    background-color: #ccc;
+}
+.formdslh table th:nth-child(4){
+    width: 20%;
+    padding:20px ;
+    background-color: #ccc;
+}
+
+.formdslh table td{
+    margin: 10px 20px;
+    border: 1px #ccc solid;
+}
+
+.formdshh table{
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+.formdshh table th:nth-child(1){
+    width: 5%;
+    padding:20px ;
+    background-color: #ccc;
+}
+.formdshh table th:nth-child(2){
+    width: 5%;
+    padding:20px ;
+    background-color: #ccc;
+}
+.formdshh table th:nth-child(3){
+    width: 10%;
+    padding:20px ;
+    background-color: #ccc;
+}
+.formdshh table th:nth-child(5){
+    width: 10%;
+    padding:20px ;
+    background-color: #ccc;
+}
+.formdshh table th:nth-child(6){
+    width: 15%;
+    padding:20px ;
+    background-color: #ccc;
+}
+.formdshh table th:nth-child(7){
+    width: 20%;
+    padding:20px ;
+    background-color: #ccc;
+}
+.formdshh table th:nth-child(8){
+    width: 10%;
+    padding:20px ;
+    background-color: #ccc;
+}
+.formdshh table th:nth-child(9){
+    width: 10%;
+    padding:20px ;
+    background-color: #ccc;
+}
+.formdshh table th:nth-child(10){
+    width: 5%;
+    padding:20px ;
+    background-color: #ccc;
+}
+.formdshh table th:nth-child(4){
+    width: 10%;
+    padding:20px ;
+    background-color: #ccc;
+}
+.formdshh table td{
+    margin: 10px 20px;
+    border: 1px #ccc solid;
+}
+.formconten form input[type="text"]{
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px #ccc solid;
+    border-radius: 5px;
+}
+
+.formconten form input[type="submit"],
+.formconten form input[type="reset"],
+.formconten form input[type="button"]{
+    width: 100px;
+    border: 1px #ccc solid;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.formconten form input[type="submit"]:hover,
+.formconten form input[type="reset"]:hover,
+.formconten form input[type="button"]:hover{
+    background-color: #ccc;
+}
+.formconten{
+    padding: 20px 0;
+}
+.formconten form input[type="number"],
+.formconten form input[type="email"],
+.formconten form input[type="password"]{
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px #ccc solid;
+    border-radius: 5px;
+}
