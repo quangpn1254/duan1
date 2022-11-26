@@ -114,15 +114,13 @@
                                                 <input type="hidden" name="id_bds" value="<?=$id_bds?>">
 
                                                 <div class="btn-wrapper ">
-                                                    <input type="submit" name="tttv" value="Liên hệ tư vấn" onclick="alert('Liện hệ tư vấn thành công')" class="type theme-btn-1 btn reverse-color btn-block" >
+                                                    <input type="submit" name="tttv" value="Liên hệ tư vấn" onclick="alert('liên hệ tư vấn thành công')" class="type theme-btn-1 btn reverse-color btn-block" >
                                                     
                                                 </div>
                                             </form>
-<!--                                            --><?php
-//                                                if(isset($thongbaotv)&&($thongbaotv!="")){
-//                                                    echo $thongbaotv;
-//                                                }
-//                                            ?>
+                                            <div>
+                                                
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
