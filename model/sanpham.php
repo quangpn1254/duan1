@@ -1,6 +1,6 @@
 <?php
-    function insert_themsp($tenbds,$gia,$hinh,$diachi,$thongtin){
-        $sql="insert into bdsan(tenbds,gia,anh,diachi,mota) values('$tenbds','$gia','$hinh','$diachi','$thongtin')";
+    function insert_themsp($tenbds,$gia,$hinh,$diachi,$thongtin,$id_dmuc){
+        $sql="insert into bdsan(tenbds,gia,anh,diachi,mota,id_dmuc) values('$tenbds','$gia','$hinh','$diachi','$thongtin','$id_dmuc')";
         pdo_execute($sql);
     }
 
@@ -58,9 +58,16 @@
     //     $sanpham_home=pdo_query($sql);
     //     return $sanpham_home;
     // }
-    function updatesp($id,$tenbds,$gia,$hinh,$diachi,$thongtin){
-        if($hinh!="") $sql="update bdsan set tenbds='".$tenbds."',gia= '".$gia. "',anh= '".$hinh. "',diachi= '".$diachi. "',mota= '".$thongtin. "' where id_bds=".$id;
-       else   $sql="update bdsan set tenbds= '".$tenbds. "',gia= '".$gia. "',diachi= '".$diachi. "',mota= '".$thongtin. "' where id_bds=".$id;
+    function updatesp($id,$tenbds,$gia,$hinh,$diachi,$thongtin,$id_dmuc){
+        if($hinh!="") $sql="update bdsan set tenbds='".$tenbds."',gia= '".$gia. "',anh= '".$hinh. "',diachi= '".$diachi. "',mota= '".$thongtin. "',id_dmuc='".$id_dmuc. "' where id_bds=".$id;
+       else   $sql="update bdsan set tenbds= '".$tenbds. "',gia= '".$gia. "',diachi= '".$diachi. "',mota= '".$thongtin. "',id_dmuc='".$id_dmuc. "' where id_bds=".$id;
         pdo_execute($sql);
     }
+
+//    function  timkiem($id_dmuc,$diachi,$giamin,$giamax){
+//        $sql= "select*from bdsan where id_dmuc=".$id_dmuc." and diachi=".$diachi."and gia => ".$giamin." and gia =<".$giamax;
+//        $timkiem=pdo_query($sql);
+//        return $timkiem;
+//    }
+
 ?>

@@ -42,17 +42,17 @@
                     <input type="text" name="thongtin"  value="<?=$mota?>" cols="140" rows="10">
                     <!-- <textarea name="thongtin"   value="<?=$mota?>"></textarea> -->
                 </div>
-                <!-- <div class="row mb10">
+                <div class="row mb10">
                     Mã loại <br>
                     <select name="mabds" id="">
                          <?php
                             foreach($danhmuc as $dm){
                                 extract($dm);
-                                echo '<option value="'.$ma_loai.'">'.$ten_loai.'</option>';
+                                echo '<option value="'.$id_dmuc.'">'.$tendmuc.'</option>';
                             }
-                        ?> 
+                        ?>
                     </select>
-                </div> -->
+                </div>
                 <div class="row mb10">
                 <input type="hidden" name="idsua" value="<?=$id_bds?>">
                     <input type="submit" name="capnhap" value="Cập nhập">

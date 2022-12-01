@@ -114,9 +114,9 @@
                 $binhluan=$_POST['binhluan'];
                 $tenkh=$_POST['tenkh'];
                 $ngaybl=date('h:i:s d/m/Y');
-                $id_bds=$_POST['idpro'];
-                insert_thembl  ($tenkh,$binhluan,$ngaybl,$id_bds);
-                header("Location: " .$_SERVER['HTTP_REFERER']);
+                $idpro=$_POST['idpro'];
+                insert_thembl($tenkh,$binhluan,$ngaybl,$idpro);
+                header("Location: ".$_SERVER['HTTP_REFERER']);
             }
         ?>
     </div>

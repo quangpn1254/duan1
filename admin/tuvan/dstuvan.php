@@ -12,9 +12,9 @@
                                 <th>Số điện thoại </th>
                                 <th>Gmail </th>
                                 <th>Tên bất động sản</th>
-                               
+                                <th>Thời gian yêu cầu</th>
                                 <th>Trạng thái</th>
-                                 <th>Thời gian yêu cầu</th>
+
                                 <th>Nhân viên tư vấn</th>
                             </tr>
                             <?php
@@ -33,9 +33,9 @@
                                             <td>'.$sdt.'</td>
                                             <td>'.$gmail.'</td>
                                             <td>'.$tenbds.'</td>
-                                            
-                                            <td>'.$trangthai.'</td>
                                             <td>'.$thoigianyeucau.'</td>
+                                            <td>'.$trangthai.'</td>
+                                            
                                             <td>'.$id_nhanvien.'</td>
                                             
                                             

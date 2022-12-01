@@ -20,7 +20,7 @@
         return $tk;
     }
 
-    function  updatetk($id,$tenkh,$gmail,$sdt,$diachi){
+    function  updatekh($id,$tenkh,$gmail,$sdt,$diachi){
         
         $sql="update khachhang set tenkh= '".$tenkh. "',gmail= '".$gmail. "',sdt= '".$sdt. "',diachi= '".$diachi. "' where id_kh=".$id;
         pdo_execute($sql);
@@ -53,4 +53,18 @@
         $tk=pdo_query_one($sql);
         return $tk;
     }
+function checkuser($user){
+    $sql="select*from taikhoan where user='".$user."'";
+    $tk=pdo_query_one($sql);
+    return $tk;
+}
+function updatetk($id_tk,$user,$pass,$email,$diachi){
+
+    $sql="update taikhoan set user= '".$user. "',pass= '".$pass. "',email= '".$email. "',diachi= '".$diachi. "' where id_tk=".$id_tk;
+    pdo_execute($sql);
+}
+function themtk($user,$pass,$email){
+    $sql="insert into taikhoan(user,pass,email) values('$user','$pass','$email')";
+    pdo_execute($sql);
+}
 ?>

@@ -1,18 +1,4 @@
 <div class="row">
-            
-            <!-- <form action="index.php?act=listsp" method="post">
-                <input type="text" name="kyw">
-                    <select name="ma_loai" id="">
-                        <option value="0">Tất cả</option> -->
-                        <!-- <?php
-                            foreach($danhmuc as $dm){
-                                extract($dm);
-                                echo '<option value="'.$ma_loai.'">'.$ten_loai.'</option>';
-                            }
-                        ?> -->
-                        </select>
-                <!-- <input type="submit" name="listok" value="go">
-            </form> -->
             <div class="chu2">
             <h2>Danh Sách Bất Động Sản</h2>
         </div>
@@ -30,6 +16,7 @@
                             <th>Ảnh</th>
                             <th>Địa Chỉ</th>
                             <th>Thông tin</th>
+                            <th>id_danhmuc</th>
                             
                             <th></th>
 
@@ -55,7 +42,7 @@
                                             <td>'.$hinh.'</td>
                                             <td>'.$diachi.'</td>
                                             <td>'.$mota.'</td>
-                                            
+                                            <td>'.$id_dmuc.'</td>
                                             <td>
                                                   <a href="'.$suasp.'"> <input type="button" value="sửa">  </a>
                                                  <a href="'.$xoasp.'"><input type="button" value="xóa"></a>

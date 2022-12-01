@@ -6,7 +6,7 @@
     include "../model/binhluan.php";
     include "../model/tuvan.php";
     include "header.php";
-
+    $danhmuc=loadalldm();
     if(isset($_GET['act'])){
         $act=$_GET['act'];
         switch ($act) {
@@ -68,7 +68,7 @@
                     $gia=$_POST['gia'];
                     $diachi=$_POST['diachi'];
                     $thongtin=$_POST['thongtin'];
-                    // $mabds=$_POST['mabds'];
+                    $id_dmuc=$_POST['mabds'];
                     $hinh=$_FILES['anh']['name'];
                     $target_dir = "../upload/";
                     $target_file = $target_dir . basename($_FILES["anh"]["name"]);
@@ -78,7 +78,7 @@
                         //echo "Sorry, there was an error uploading your file.";
                     }
                    
-                    insert_themsp($tenbds,$gia,$hinh,$diachi,$thongtin);
+                    insert_themsp($tenbds,$gia,$hinh,$diachi,$thongtin,$id_dmuc);
                     $thongbao="thêm thành công";
                 }
                 //$danhmuc=loadalldm();
@@ -121,8 +121,7 @@
                         $gia=$_POST['gia'];
                         $diachi=$_POST['diachi'];
                         $thongtin=$_POST['thongtin'];
-                        // $mabds=$_POST['mabds'];
-    
+                        $id_dmuc=$_POST['mabds'];
                         $hinh=$_FILES['anh']['name'];
                         $target_dir = "../upload/";
                         $target_file = $target_dir . basename($_FILES["anh"]["name"]);
@@ -132,7 +131,7 @@
                             //echo "Sorry, there was an error uploading your file.";
                         }
     
-                        updatesp($id,$tenbds,$gia,$hinh,$diachi,$thongtin);
+                        updatesp($id,$tenbds,$gia,$hinh,$diachi,$thongtin,$id_dmuc);
                         $thongbao="cập nhập  thành công";
                     }
                    

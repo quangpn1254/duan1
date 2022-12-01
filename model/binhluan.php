@@ -14,8 +14,8 @@
         pdo_execute($sql);
     }
 
-    function insert_thembl  ($tenkh,$binhluan,$ngaybl,$id_bds){
-        $sql="insert into binhluan(tenkh,binhluan,ngaybl,id_bds) values('$tenkh','$binhluan','$ngaybl','$id_bds')";
+    function insert_thembl  ($tenkh,$binhluan,$ngaybl,$idpro){
+        $sql="insert into binhluan(tenkh,binhluan,ngaybl,id_bds) values('$tenkh','$binhluan','$ngaybl','$idpro')";
         pdo_execute($sql);
     }
 ?>

@@ -105,6 +105,7 @@
                                 </div>
                                 <div class="row">
                                     <div class=" offset-lg-3 row">
+
                                         <div class=" row">
                                             <form action="" method="post" enctype="multipart/form-data" class="  row">
                                                 <input type="text" name="tenkh" placeholder="Tên khách hàng">
@@ -114,7 +115,7 @@
                                                 <input type="hidden" name="id_bds" value="<?=$id_bds?>">
 
                                                 <div class="btn-wrapper ">
-                                                    <input type="submit" name="tttv" value="Liên hệ tư vấn" onclick="alert('liên hệ tư vấn thành công')" class="type theme-btn-1 btn reverse-color btn-block" >
+                                                    <input type="submit" name="tttv" value="Liên hệ tư vấn"  class="type theme-btn-1 btn reverse-color btn-block" >
                                                     
                                                 </div>
                                             </form>
@@ -133,7 +134,7 @@
                         <script>
                         $(document).ready(function(){
                            
-                             $("#binhluan").load("view/binhluan.php", {idpro:<?=$id_bds?>});
+                             $("#binhluan").load("view/binhluan.php",{idpro:<?=$id_bds?>});
                            
                         });
                         </script>

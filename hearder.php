@@ -109,8 +109,12 @@
                                         
                                         <li><a href="#l">Contact</a></li>
                                         <li class="special-link">
-                                            <a href="#">Add Listing</a>
+                                            <a href="index.php?act=dangnhap">Đăng nhập</a>
                                         </li>
+                                        <li class="special-link">
+                                            <a href="index.php?act=dangky">Đăng ký</a>
+                                        </li>
+
                                     </ul>
                                 </div>
                             </nav>

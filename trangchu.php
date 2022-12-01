@@ -18,35 +18,45 @@
                                         <div class="tab-content">
                                             <div class="tab-pane fade active show" id="ltn__form_tab_1_1">
                                                 <div class="car-dealer-form-inner">
-                                                    <form action="#" class="ltn__car-dealer-form-box row">
+                                                    <form action="index.php?act=timkiem" method="post" class="ltn__car-dealer-form-box row">
                                                         <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-4 col-md-6">
-                                                            <select class="nice-select">
-                                                                <option>Loại tài sản</option>
-                                                                <option>Căn hộ</option>
-                                                                <option>Chung cư</option>
-                                                                <option>Gia đình đơn</option>
-                                                                
+<!--                                                            <select class="nice-select">-->
+<!--                                                                <option>Loại tài sản</option>-->
+<!--                                                                <option>Căn hộ</option>-->
+<!--                                                                <option>Chung cư</option>-->
+<!--                                                                <option>Gia đình đơn</option>-->
+<!--                                                            </select>-->
+                                                            <select name="id_dmuc" id="">
+                                                                <option>Loại tài sản</option>-->
+                                                                <?php
+                                                                    foreach($listdm as $dm){
+                                                                        extract($dm);
+                                                                        echo '<option value="'.$id_dmuc.'">'.$tendmuc.'</option>';
+                                                                    }
+                                                                ?>
                                                             </select>
-                                                        </div> 
+                                                        </div>
                                                         <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-car col-lg-4 col-md-6">
-                                                            <select class="nice-select">
-                                                                <option>Địa điểm</option>
-                                                                <option>Hà nội</option>
-                                                                <option>Hải phòng</option>
-                                                                <option>Ninh bình</option>
-                                                                <option>Quảng ninh</option>
-                                                                <option>Tp. Hồ Chí Minh</option>
+                                                            <select class="nice-select" name="diachi" >
+                                                                <option>Thành phố</option>-->
+                                                                <?php
+                                                                foreach($listdc as $dc){
+                                                                    extract($dc);
+                                                                    echo '<option value="'.$diachi.'">'.$diachi.'</option>';
+                                                                }
+                                                                ?>
                                                             </select>
+
                                                         </div> 
                                                         
                                                         <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-cog col-lg-4 col-md-6">                                                            
                                                             <div class="input-item input-item-name ltn__custom-icon">
-                                                                <input type="text" name="name" placeholder="Kích thước tối thiểu(tính bằng mét)">
+                                                                <input type="text" name="giamin" placeholder="Giá tiền(min)">
                                                             </div>
                                                         </div> 
                                                         <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-cog col-lg-4 col-md-6">                                                            
                                                             <div class="input-item input-item-name ltn__custom-icon">
-                                                                <input type="text" name="name" placeholder="Khích thước tối đa(tính bằng mét)">
+                                                                <input type="text" name="giamax" placeholder="Giá tiền(max)">
                                                             </div>
                                                         </div> 
                                                         <div class="car-price-filter-range col-lg-12">
@@ -59,7 +69,7 @@
                                                             </div> -->
                                                             <div class="btn-wrapper text-center">
                                                                 <!-- <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</button> -->
-                                                                <a href="shop.html" class="btn theme-btn-1 btn-effect-1 text-uppercase">Tìm kiếm</a>
+                                                                <input type="submit" name="timkiem" value="tìm kiếm">
                                                             </div>
                                                         </div>
                                                     </form>

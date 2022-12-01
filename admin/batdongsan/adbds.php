@@ -27,7 +27,7 @@
                     Thông tin <br>
                     <textarea name="thongtin" cols="140" rows="10"></textarea>
                 </div>
-                <!-- <div class="row mb10">
+                <div class="row mb10">
                     Mã loại <br>
                     <select name="mabds" id="">
                              <?php
@@ -35,9 +35,9 @@
                                 extract($dm);
                                 echo '<option value="'.$id_dmuc.'">'.$tendmuc.'</option>';
                             }
-                        ?>   
+                        ?>
                     </select>
-                </div> -->
+                </div>
                 <div class="row mb10">
                     
                     <input type="submit" name="themmoi" value="Thêm mới">
