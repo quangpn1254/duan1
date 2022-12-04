@@ -193,7 +193,18 @@
 
             // tư vấn 
             case 'tuvan':
-                $listtuvan=loadalltv();
+                if(isset($_POST['listok'])&&($_POST['listok'])){
+                    $kyw=$_POST['kyw'];
+                    $trangthai=$_POST['trangthai'];
+                    $nv=$_POST['id_nv'];
+                }else{
+                    $kyw="";
+                    $trangthai="";
+                    $nv=0;
+                }
+                $listtuvan=loadalltv($kyw,$nv,$trangthai);
+                $nvtv=loadallnvtv();
+
                 include 'tuvan/dstuvan.php';
                 break;
 
@@ -206,30 +217,40 @@
                 $listtuvan=loadalltv();
                 include 'tuvan/dstuvan.php';
                 break;
-        // case 'suatv':
-        //     if(isset($_GET['id'])&&($_GET['id'])>=0 ){
-        //         $suatv=loadonetk($_GET['id']);
-        //     }
-                
-               
-        //     include 'tuvan/dstuvan.php';
-        //     break;
+            case 'suatv':
+                if(isset($_GET['idtv'])&&($_GET['idtv'])>0){
+                    $suatv=loadonetv($_GET['idtv']);
+                    $nvtv=loadallnvtv();
+                }
 
+                
+                include 'tuvan/suatv.php';
+                break;
 
-        // case 'updatetv':
-        //     if(isset($_POST['capnhap'])&&($_POST['capnhap'])){
-        //         $tenkh=$_POST['tenkh'];
-                
-        //         $gmail=$_POST['email'];
-        //         $sdt=$_POST['sdt'];
-        //         $diachi=$_POST['diachi'];
-                
-        //         $id=$_POST['idsua'];
-        //         updatetk($id,$tenkh,$gmail,$sdt,$diachi);
-        //     }
-        //     $listtuvan=loadalltv();
-        //     include 'tuvan/dstuvan.php';
-        //     break;
+            case 'datv':
+                if(isset($_GET['iddatv'])&&($_GET['iddatv'])>0){
+                    updatedatv($_GET['iddatv']);
+                }
+                $listtuvan=loadalltv("",0,"");
+                include 'tuvan/dstuvan.php';
+                break;
+
+         case 'updatetv':
+             if(isset($_POST['capnhap'])&&($_POST['capnhap'])){
+                 $nvtuvan=$_POST['nvtuvan'];
+                 $id=$_POST['idsua'];
+                 updatetv($nvtuvan,$id);
+             }
+             $listtuvan=loadalltv("",0,"");
+             $nvtv=loadallnvtv();
+
+             include 'tuvan/dstuvan.php';
+             break;
+            // tư vấn
+            case 'nvtv':
+                $listnvtv=loadallnv();
+                include 'nvtuvan/dsnvtuvan.php';
+                break;
         
         default: 
             include 'home.php';

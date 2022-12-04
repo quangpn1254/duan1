@@ -8,12 +8,25 @@
     include "anh.php";
     $listdm=loadalldm();
     $listdc=loadalldc();
-    $spnew=loadallsp_home();
+    $sphome=loadallsph();
+    
     if(isset($_GET['act'])){
         $act=$_GET['act'];
         switch ($act) {
             case 'sanpham':
-                
+                if(isset($_POST['timkiem'])&&($_POST['timkiem'])){
+                    $id_dmuc=$_POST['dmuc'];
+                    $diachi=$_POST['diachi'];
+                    $giamin=$_POST['giamin'];
+                    $giamax=$_POST['giamax'];
+                }
+                else{
+                    $id_dmuc=0;
+                    $diachi="";
+                    $giamin=0;
+                    $giamax=0;
+                }
+                $spnew=loadallsp_home($id_dmuc,$diachi,$giamin,$giamax);
                include "view/sanpham.php";
                 break;
 
@@ -29,7 +42,7 @@
                         $sdt = $_POST['sdt'];
                         $diachi = $_POST['diachi'];
                         $id_bds = $_POST['id_bds'];
-                        $thoigianyeucau = date("Y/m/d");
+                        $thoigianyeucau = date('h:i:s d/m/Y');
 
                         $checkkk = checkkk($tenkh, $gmail, $sdt, $diachi);
                         if (is_array($checkkk)) {
@@ -56,8 +69,10 @@
                 if(isset($_POST['dangky'])&&($_POST['dangky'])){
                     $user=$_POST['user'];
                     $pass=$_POST['pass'];
-                    $email=$_POST['email'];
-                    themtk($user,$pass,$email);
+                    $email=$_POST['gmail'];
+                    $sdt=$_POST['sdt'];
+                    $dia_chi=$_POST['diachi'];
+                    themtk($user,$pass,$email, $sdt,$dia_chi);
                     $thongbao="đăng ký thành công";
                 }
                 include "view/taikhoan/dangky.php";
@@ -70,7 +85,7 @@
                     if(is_array($checkuser)){
                         $_SESSION['user']=$checkuser;
 //                        include "view/taikhoan/taikhoan.php";
-                        header("Location: index.php?act=dangnhap");
+//                        header("Location: index.php?act=dangnhap");
                     }else{
                         $thongbao="tài khoản không tồn tại";
                     }

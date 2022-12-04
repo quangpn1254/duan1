@@ -63,8 +63,8 @@ function updatetk($id_tk,$user,$pass,$email,$diachi){
     $sql="update taikhoan set user= '".$user. "',pass= '".$pass. "',email= '".$email. "',diachi= '".$diachi. "' where id_tk=".$id_tk;
     pdo_execute($sql);
 }
-function themtk($user,$pass,$email){
-    $sql="insert into taikhoan(user,pass,email) values('$user','$pass','$email')";
+function  themtk($user,$pass,$email, $sdt,$dia_chi){
+    $sql="insert into taikhoan(user,pass,email,sdt,diachi) values('$user','$pass','$email','$sdt','$dia_chi')";
     pdo_execute($sql);
 }
 ?>

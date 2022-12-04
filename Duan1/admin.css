@@ -53,12 +53,16 @@
 
     }
     .row{
-        float: left;
+        
         width: 100%;
     }
     .mb10{
         margin-top: 10px;
     }
+    .mb{
+        margin-bottom: 30px;
+    }
+
     .headeradmin{
    
         background-color: aquamarine;

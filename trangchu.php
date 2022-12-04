@@ -18,16 +18,10 @@
                                         <div class="tab-content">
                                             <div class="tab-pane fade active show" id="ltn__form_tab_1_1">
                                                 <div class="car-dealer-form-inner">
-                                                    <form action="index.php?act=timkiem" method="post" class="ltn__car-dealer-form-box row">
+                                                    <form action="index.php?act=sanpham" method="post" class="ltn__car-dealer-form-box row">
                                                         <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-4 col-md-6">
-<!--                                                            <select class="nice-select">-->
-<!--                                                                <option>Loại tài sản</option>-->
-<!--                                                                <option>Căn hộ</option>-->
-<!--                                                                <option>Chung cư</option>-->
-<!--                                                                <option>Gia đình đơn</option>-->
-<!--                                                            </select>-->
-                                                            <select name="id_dmuc" id="">
-                                                                <option>Loại tài sản</option>-->
+                                                            <select name="dmuc" id="">
+                                                                <option value="">Loại tài sản</option>
                                                                 <?php
                                                                     foreach($listdm as $dm){
                                                                         extract($dm);
@@ -38,7 +32,7 @@
                                                         </div>
                                                         <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-car col-lg-4 col-md-6">
                                                             <select class="nice-select" name="diachi" >
-                                                                <option>Thành phố</option>-->
+                                                                <option value="" >Thành phố</option>
                                                                 <?php
                                                                 foreach($listdc as $dc){
                                                                     extract($dc);
@@ -104,14 +98,14 @@
                             <div class="ltn__product-tab-content-inner ltn__product-grid-view">
                                 <div class="row">
                                     <?php
-                                         foreach($spnew as $sp){
+                                         foreach($sphome as $sp){
                                             extract($sp);
                                             $hinh=$img_path.$anh;
                                             $linkbds="index.php?act=ctbds&id=".$id_bds;
                                         echo '
                                         <div class="col-xl-6 col-sm-6 col-12">
                                         <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                                            <div class="product-img">
+                                            <div class="product-img ">
                                                 <a href="'.$linkbds.'"><img src="'.$hinh.'" alt="#"></a>
                                                 <div class="'.$linkbds.'">
                                                    
@@ -492,4 +486,5 @@
             </div>
         </div>
     </div>
+  </div>
     <!-- CALL TO ACTION END -->

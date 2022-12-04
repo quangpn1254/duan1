@@ -103,6 +103,32 @@
                                         </div>
                                     </div>
                                 </div>
+                                <?php
+                                    if(isset($_SESSION['user'])){
+                                        extract($_SESSION['user']);
+                                ?>
+                                <div class="row">
+                                    <div class=" offset-lg-3 row">
+
+                                        <div class=" row">
+                                            <form action="" method="post" enctype="multipart/form-data" class="  row">
+                                                <input type="text" name="tenkh" placeholder="Tên khách hàng" value="<?=$user ?>">
+                                                <input type="text" name="gmail" placeholder="Gmail" value="<?=$email ?>">
+                                                <input type="text" name="sdt" placeholder="Số điện thoại" value="<?=$sdt?>">
+                                                <input type="text" name="diachi" placeholder="Địa chỉ" value="<?=$diachi ?>">
+                                                <input type="hidden" name="id_bds" value="<?=$id_bds?>" value="<?=$user ?>">
+
+                                                <div class="btn-wrapper ">
+                                                    <input type="submit" name="tttv" value="Liên hệ tư vấn"  class="type theme-btn-1 btn reverse-color btn-block" >
+                                                    
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php
+                                }else{
+                                ?>
                                 <div class="row">
                                     <div class=" offset-lg-3 row">
 
@@ -116,15 +142,15 @@
 
                                                 <div class="btn-wrapper ">
                                                     <input type="submit" name="tttv" value="Liên hệ tư vấn"  class="type theme-btn-1 btn reverse-color btn-block" >
-                                                    
+
                                                 </div>
                                             </form>
-                                            <div>
-                                                
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <?php
+                                }
+                                ?>
                             </div>
                         </div>
                         <!-- LOGIN AREA END -->

@@ -22,9 +22,26 @@
         $sanpham=pdo_query($sql);
         return $sanpham;
     }
-
-    function loadallsp_home(){
-        $sql="select * from bdsan where 1 order by id_bds desc limit 0,9";
+    function loadallsph(){
+        $sql="select * from bdsan where 1 order by id_bds desc limit 0,6";
+        $sanpham_home=pdo_query($sql);
+        return $sanpham_home;
+    }
+    function loadallsp_home($dmuc,$diachi,$giamin,$giamax){
+        $sql="select * from bdsan where 1";
+        if($dmuc>0){
+            $sql.=" and id_dmuc = '".$dmuc. "%'";
+        }
+        if($diachi!=""){
+            $sql.=" and diachi like '%".$diachi. "%'";
+        }
+        if($giamin>0){
+            $sql.=" and gia >= '".$giamin. "%'";
+        }
+        if($giamax>0){
+            $sql.=" and gia <= '".$giamax. "%'";
+        }
+        $sql.=" order by id_bds desc limit 0,6";
         $sanpham_home=pdo_query($sql);
         return $sanpham_home;
     }

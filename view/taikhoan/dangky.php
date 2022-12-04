@@ -27,10 +27,12 @@
             <div class="col-lg-6 offset-lg-3">
                 <div class="account-login-inner">
                     <form action="index.php?act=dangky" method="post" enctype="multipart/form-data" class="ltn__form-box contact-form-box">
-                        <input type="email" name="email" placeholder="gmail">
+
                         <input type="text" name="user" placeholder="Tên Đăng Nhập">
                         <input type="password" name="pass" placeholder="Mật Khẩu">
-
+                        <input type="text" name="gmail" placeholder="Gmail">
+                        <input type="text" name="sdt" placeholder="Số điện thoại">
+                        <input type="text" name="diachi" placeholder="Địa chỉ">
                         <div class="btn-wrapper ">
                             <input type="submit" name="dangky" value="đăng ký" class="type theme-btn-1 btn reverse-color btn-block" >
 
